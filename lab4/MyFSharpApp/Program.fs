@@ -136,43 +136,38 @@ open System
 //     funkcja2
 //     //....
 
-// Rekord do przechowywania danych użytkownika
+
+
+//zad1
 type UserData = { Weight: float; Height: float }
 
-// Funkcja do obliczania BMI
 let calculateBMI weight height =
     let heightInMeters = height / 100.0 // Przekształcanie wzrostu z cm na metry
     weight / (heightInMeters * heightInMeters)
 
-// Funkcja do określania kategorii BMI
 let getCategory bmi =
     if bmi < 18.5 then "Niedowaga"
     elif bmi >= 18.5 && bmi < 24.9 then "Waga prawidłowa"
     elif bmi >= 25.0 && bmi < 29.9 then "Nadwaga"
     else "Otyłość"
 
-// Funkcja główna
 [<EntryPoint>]
 let main argv =
-    // Komunikacja z użytkownikiem i pobieranie danych
+
     printfn "Wprowadź swoją wagę w kilogramach (kg): "
-    let weight = System.Double.Parse(System.Console.ReadLine()) // Zmieniono na System.Double.Parse, aby zapewnić zgodność z float (double)
+    let weight = System.Double.Parse(System.Console.ReadLine())
 
     printfn "Wprowadź swój wzrost w centymetrach (cm): "
-    let height = System.Double.Parse(System.Console.ReadLine()) // Zmieniono na System.Double.Parse
+    let height = System.Double.Parse(System.Console.ReadLine())
 
-    // Tworzenie rekordu z danymi użytkownika
     let user = { Weight = weight; Height = height }
 
-    // Obliczanie BMI
     let bmi = calculateBMI user.Weight user.Height
     printfn "Twoje BMI wynosi: %.2f" bmi
 
-    // Określenie kategorii BMI
     let category = getCategory bmi
     printfn "Kategoria: %s" category
 
-    // Czekanie na naciśnięcie klawisza, aby zakończyć program
     printfn "\nNaciśnij dowolny klawisz, aby zakończyć."
     System.Console.ReadKey() |> ignore
-    0 // Zwracamy 0, aby zakończyć program
+    0 
