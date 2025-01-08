@@ -1,0 +1,4 @@
+C:\Users\w67235\Desktop\lab6\MyFSHarpApp\obj\Debug\net8.0\MyFSharpApp.fsproj.AssemblyReference.cache
+C:\Users\w67235\Desktop\lab6\MyFSHarpApp\obj\Debug\net8.0\MyFSharpApp.AssemblyInfoInputs.cache
+C:\Users\w67235\Desktop\lab6\MyFSHarpApp\obj\Debug\net8.0\MyFSharpApp.AssemblyInfo.fs
+C:\Users\w67235\Desktop\lab6\MyFSHarpApp\obj\Debug\net8.0\MyFSharpApp.fsproj.CoreCompileInputs.cache
